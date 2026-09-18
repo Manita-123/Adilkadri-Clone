@@ -1,0 +1,21 @@
+.collection .swiper-backface-hidden .swiper-slide{
+    width: auto !important;
+}
+
+.collection .swiper-backface-hidden {display: block;}
+
+.products .swiper-wrapper .swiper-slide {width: auto !important; }
+
+.swiper-scrollbar.swiper-horizontal > &, &.swiper-scrollbar-horizontal{height: 0 ; width: 0;}
+
+.btn-gradient {
+  background: linear-gradient(180deg, #f5c46b 0%, #d9a84a 100%);
+  box-shadow: 0 6px 18px rgba(217,168,74,0.25);
+  transition: background-color .18s ease, box-shadow .18s ease, transform .12s ease;
+}
+.btn-gradient:hover {
+  background-image: none;            /* remove gradient */
+  background-color: #f6be5e;         /* solid hover color */
+  box-shadow: 0 8px 22px rgba(217,168,74,0.30);
+  transform: translateY(-1px);
+}
