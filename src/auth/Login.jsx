@@ -24,38 +24,37 @@ export default function Login() {
   }, [email, password]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
 
-    setErrMsg("");
+  e.preventDefault();
+  setErrMsg("");
 
-    if (!email || !password) {
-      setErrMsg("Please enter both email and password.");
-      return;
+  if (!email || !password) {
+    setErrMsg("Please enter both email and password.");
+    return;
+  }
+
+  try {
+
+    const userData = login(email, password);
+
+    if (userData.role === "admin") {
+
+      navigate("/admin/dashboard");
+
+    } else {
+
+      navigate("/home");
+
     }
 
-    try {
-      // Frontend-only login
-      const userData = login(email, password);
+  } catch (err) {
 
-      console.log("Logged in user:", userData);
-      console.log("User role:", userData.role);
+    setErrMsg(
+      err?.message || "Login failed. Please try again."
+    );
 
-      // Redirect according to role
-      if (userData.role === "admin") {
-        navigate("/admin/dashboard");
-      } else {
-        navigate("/home");
-      }
-    } catch (err) {
-      console.error("Login error:", err);
-
-      setErrMsg(
-        err?.message || "Login failed. Please try again."
-      );
-
-      errRef.current?.focus();
-    }
-  };
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">

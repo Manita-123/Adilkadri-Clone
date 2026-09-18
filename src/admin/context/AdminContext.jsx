@@ -1,27 +1,101 @@
 import { createContext, useContext, useState } from "react";
-import sampleProducts from "../../user/data" // adjust if your data path differs
+import {products, ComboProducts} from "../../user/data";
 
 const AdminContext = createContext(null);
 
+const sampleProducts = [products, ComboProducts];
+
+
 export function AdminProvider({ children }) {
-    const [products, setProducts] = useState(sampleProducts || []);
+
+    // Load products from localStorage first
+    const [products, setProducts] = useState(() => {
+        const savedProducts = localStorage.getItem("products");
+
+        return savedProducts
+            ? JSON.parse(savedProducts)
+            : sampleProducts || [];
+    });
+
     const [orders, setOrders] = useState([]);
     const [users, setUsers] = useState([]);
 
+    // -------------------------
     // Products
+    // -------------------------
+
     function addProduct(product) {
-        setProducts((p) => [{ ...product, id: `prod-${Date.now()}` }, ...p]);
-    }
-    function updateProduct(id, patch) {
-        setProducts((p) => p.map((it) => (it.id === id ? { ...it, ...patch } : it)));
-    }
-    function deleteProduct(id) {
-        setProducts((p) => p.filter((it) => it.id !== id));
+
+        const newProduct = {
+            ...product,
+            id: `prod-${Date.now()}`
+        };
+
+        setProducts((prevProducts) => {
+
+            const updatedProducts = [
+                newProduct,
+                ...prevProducts
+            ];
+
+            localStorage.setItem(
+                "products",
+                JSON.stringify(updatedProducts)
+            );
+
+            return updatedProducts;
+        });
     }
 
-    // Orders & Users: placeholder CRUD
+    function updateProduct(id, patch) {
+
+        setProducts((prevProducts) => {
+
+            const updatedProducts = prevProducts.map((item) =>
+                item.id === id
+                    ? { ...item, ...patch }
+                    : item
+            );
+
+            localStorage.setItem(
+                "products",
+                JSON.stringify(updatedProducts)
+            );
+
+            return updatedProducts;
+        });
+    }
+
+    function deleteProduct(id) {
+
+        setProducts((prevProducts) => {
+
+            const updatedProducts = prevProducts.filter(
+                (item) => item.id !== id
+            );
+
+            localStorage.setItem(
+                "products",
+                JSON.stringify(updatedProducts)
+            );
+
+            return updatedProducts;
+        });
+    }
+
+    // -------------------------
+    // Orders
+    // -------------------------
+
     function addOrder(order) {
-        setOrders((o) => [{ ...order, id: `ord-${Date.now()}` }, ...o]);
+
+        setOrders((prevOrders) => [
+            {
+                ...order,
+                id: `ord-${Date.now()}`
+            },
+            ...prevOrders
+        ]);
     }
 
     return (
@@ -31,10 +105,12 @@ export function AdminProvider({ children }) {
                 addProduct,
                 updateProduct,
                 deleteProduct,
+
                 orders,
                 addOrder,
+
                 users,
-                setUsers,
+                setUsers
             }}
         >
             {children}
@@ -43,5 +119,13 @@ export function AdminProvider({ children }) {
 }
 
 export function useAdmin() {
-    return useContext(AdminContext);
+    const context = useContext(AdminContext);
+
+    if (!context) {
+        throw new Error(
+            "useAdmin must be used inside AdminProvider"
+        );
+    }
+
+    return context;
 }

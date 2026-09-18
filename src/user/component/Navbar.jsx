@@ -88,6 +88,13 @@ function Navbar() {
                         My Orders
                       </p>
 
+                      <p
+                        onClick={() => navigate("/wishlist")}
+                        className="hover:text-amber-500 hover:underline p-1 cursor-pointer"
+                      >
+                        My Wishlist
+                      </p>
+
                       {user.role === "admin" && (
                         <p
                           onClick={() => navigate("/admin")}

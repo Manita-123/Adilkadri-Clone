@@ -27,6 +27,7 @@ import Adminproducts from './admin/pages/Products'
 import AdminDashboard from './admin/pages/Dashboard'
 import UserLayout from './user/UserLayout'
 import AddProducts from './admin/pages/AddProducts'
+import WishList from './user/Pages/WishList'
 
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
               <Route path='search' element={<SearchFilter />} />
               <Route path='product/:id' element={<ProductDetail />} />
               <Route path='checkout' element={<Checkout />} />
+              <Route path='wishlist' element={<WishList/>} />
               <Route path='order' element={<OrderConfirmation />} />
             </Route>
 
