@@ -18,6 +18,7 @@ import ProductDetail from './user/Pages/ProductDetail'
 import PageNotFound from './user/Pages/PageNotFound'
 import Checkout from './user/Pages/Checkout'
 import OrderConfirmation from './user/Pages/OrderConfirmation'
+import Order from './user/Pages/Order'
 
 // Admin
 import AdminLayout from "./admin/AdminLayout"
@@ -29,9 +30,7 @@ import UserLayout from './user/UserLayout'
 import AddProducts from './admin/pages/AddProducts'
 import WishList from './user/Pages/WishList'
 
-
 function App() {
-
   const { user, loading } = useAuth(); // Get from your AuthContext
 
 
@@ -65,7 +64,8 @@ function App() {
               <Route path='product/:id' element={<ProductDetail />} />
               <Route path='checkout' element={<Checkout />} />
               <Route path='wishlist' element={<WishList/>} />
-              <Route path='order' element={<OrderConfirmation />} />
+              <Route path='place-order' element={<OrderConfirmation />} />
+              <Route path='orders' element={<Order/>} />
             </Route>
 
             {/* Catch-all route for 404 Not Found */}
