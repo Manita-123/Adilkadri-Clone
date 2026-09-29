@@ -11,14 +11,13 @@ import UnAuthPage from './auth/UnAuth'
 
 //User
 import Home from './user/Pages/Home'
-import Cart from './user/pages/Cart'
+import Cart from './user/Pages/Cart'
 import Account from './user/Pages/Account'
 import SearchFilter from './user/Pages/SearchFilter'
 import ProductDetail from './user/Pages/ProductDetail'
 import PageNotFound from './user/Pages/PageNotFound'
 import Checkout from './user/Pages/Checkout'
 import OrderConfirmation from './user/Pages/OrderConfirmation'
-import Order from './user/Pages/Order'
 
 // Admin
 import AdminLayout from "./admin/AdminLayout"
@@ -63,9 +62,8 @@ function App() {
               <Route path='search' element={<SearchFilter />} />
               <Route path='product/:id' element={<ProductDetail />} />
               <Route path='checkout' element={<Checkout />} />
-              <Route path='wishlist' element={<WishList/>} />
+              <Route path='wishlist' element={<WishList />} />
               <Route path='place-order' element={<OrderConfirmation />} />
-              <Route path='orders' element={<Order/>} />
             </Route>
 
             {/* Catch-all route for 404 Not Found */}

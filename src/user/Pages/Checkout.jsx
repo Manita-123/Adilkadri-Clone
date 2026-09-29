@@ -1,17 +1,12 @@
 import React, { useState } from 'react'
-import { useNavigate } from "react-router-dom";
 import { useCart } from '../../context/CartContext'
-import { useOrders } from "../../context/OrderContext";
 
 import { Package, MapPin, Zap } from 'lucide-react'
 import OrderConfirmation from './OrderConfirmation';
 
 export default function Checkout() {
 
-    const navigate = useNavigate();
-
     const { cartTotal, clearCart, cart } = useCart();
-    const { createOrder } = useOrders();
 
     const [deliveryDetails, setDeliveryDetails] = useState({
         name: "",
@@ -33,30 +28,6 @@ export default function Checkout() {
         setIsConfirmed(true);
     }
 
-    const handlePlaceOrder = () => {
-  console.log("Cart before order:", cart);
-
-  const totalAmount = cart.reduce(
-    (total, item) =>
-      total + item.price * (item.quantity || 1),
-    0
-  );
-
-  const newOrder = createOrder(
-    cart,
-    totalAmount
-  );
-
-  console.log("Created order:", newOrder);
-
-  clearCart();
-
-  navigate("/order", {
-    state: {
-      order: newOrder
-    }
-  });
-};
 
     if (isConfirmed) return <OrderConfirmation deliveryDetails={deliveryDetails} />
 

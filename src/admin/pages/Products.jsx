@@ -11,8 +11,6 @@ export default function Adminproducts() {
 
   const navigate = useNavigate();
 
-  console.log(product);
-
    // 2. Slice the array to only get the amount we want to display
   const displayedProducts = allProducts.slice(0, visibleCount);
 
