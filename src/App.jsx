@@ -55,8 +55,8 @@ function App() {
 
             {/* USER ROUTES */}
             <Route path='/' element={<UserLayout />} >
-              <Route index element={<Navigate to="home" replace />} />
-              <Route path="home" element={<Home />} />
+              {/* <Route index element={<Navigate to="home" replace />} /> */}
+              <Route path="/" element={<Home />} />
               <Route path="cart" element={<Cart />} />
               <Route path="account" element={<Account />} />
               <Route path='search' element={<SearchFilter />} />
