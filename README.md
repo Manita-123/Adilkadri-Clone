@@ -284,29 +284,31 @@ This allows application data to remain available even after a browser refresh.
 ## 🔄 Application Flow
 
 ```text
-             ┌──────────────┐
-             │    Visitor   │
-             └──────┬───────┘
-                    │
-              Login / Signup
-                    │
-                    ▼
-             ┌──────────────┐
-             │     User     │
-             └──────┬───────┘
-                    │
-       ┌────────────┼────────────┐
-       ▼            ▼            ▼
-   Products      Wishlist       Search
-       │            │
-       ▼            ▼
-      Cart ◄──── Wishlist
-       │
-       ▼
-    Checkout
-       │
-       ▼
-Order Confirmation
+                                      React Application
+                                │
+              ┌─────────────────┴─────────────────┐
+              │                                   │
+            Auth                              Application
+              │                                   │
+     ┌────────┼────────┐                  ┌───────┴────────┐
+     │        │        │                  │                │
+   Login    Signup   CheckAuth           User             Admin
+                                             │                │
+                                      ┌──────┴──────┐    ┌────┴─────┐
+                                      │             │    │          │
+                                    Pages       Components Pages   Components
+                                      │             │    │          │
+                                      └──────┬──────┘    └────┬─────┘
+                                             │                │
+                                      Context API        AdminContext
+                                             │
+                                  ┌──────────┼──────────┐
+                                  │          │          │
+                                Auth       Cart      Wishlist
+                                  │          │          │
+                                  └──────────┴──────────┘
+                                             │
+                                         LocalStorage
 ```
 
 ---
