@@ -1,5 +1,5 @@
 import React from 'react'
-import FounderImg from '../assests/img/founder.png'
+import FounderImg from '../assets/img/founder.png'
 
 function Founder() {
     return (
@@ -25,6 +25,7 @@ function Founder() {
                         alt="Founder Adil Qadri"
                         className="w-full h-full object-cover rounded-md"
                         loading="lazy"
+                      decoding="async"
                     />
                 </div>
             </div>

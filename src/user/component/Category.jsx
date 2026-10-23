@@ -5,13 +5,13 @@ import 'swiper/css/grid';
 import 'swiper/css/pagination';
 import { Grid, Pagination } from 'swiper/modules';
 
-import s1 from "../assests/img/category-image-1.png"
-import s2 from "../assests/img/category-image-2.png"
-import s3 from "../assests/img/category-image-3.png"
-import s4 from "../assests/img/category-image-4.png"
-import s5 from "../assests/img/category-image-5.png"
-import s6 from "../assests/img/category-image-6.png"
-import s7 from "../assests/img/category-image-7.png"
+import s1 from "../assets/img/category-image-1.png"
+import s2 from "../assets/img/category-image-2.png"
+import s3 from "../assets/img/category-image-3.png"
+import s4 from "../assets/img/category-image-4.png"
+import s5 from "../assets/img/category-image-5.png"
+import s6 from "../assets/img/category-image-6.png"
+import s7 from "../assets/img/category-image-7.png"
 
 
 function Category() {

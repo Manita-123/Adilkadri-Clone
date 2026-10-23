@@ -1,30 +1,30 @@
-import p1 from "./assests/img/product-9.png"
-import p2 from "./assests/img/product-collection-2.jpg"
-import p3 from "./assests/img/product-collection-4.jpg"
-import p4 from './assests/img/product-9.jpg'
-import p5 from './assests/img/product-colllection-5.jpg'
-import p6 from './assests/img/product-colllection-6.jpg'
-import p7 from './assests/img/product-collection-7.jpg'
-import p8 from './assests/img/product-10.jpg'
-import p9 from './assests/img/product-11.jpg'
-import p10 from './assests/img/product-12.jpg'
-import p11 from './assests/img/product-13.jpg'
-import p12 from './assests/img/product-13.png'
-import p13 from './assests/img/product-14.jpg'
-import p14 from './assests/img/product-15.jpg';
-import p15 from './assests/img/product-16.jpg'
-import p16 from "./assests/img/product-8.jpg";
+import p1 from "./assets/img/product-9.png"
+import p2 from "./assets/img/product-collection-2.jpg"
+import p3 from "./assets/img/product-collection-4.jpg"
+import p4 from './assets/img/product-9.jpg'
+import p5 from './assets/img/product-colllection-5.jpg'
+import p6 from './assets/img/product-colllection-6.jpg'
+import p7 from './assets/img/product-collection-7.jpg'
+import p8 from './assets/img/product-10.jpg'
+import p9 from './assets/img/product-11.jpg'
+import p10 from './assets/img/product-12.jpg'
+import p11 from './assets/img/product-13.jpg'
+import p12 from './assets/img/product-13.png'
+import p13 from './assets/img/product-14.jpg'
+import p14 from './assets/img/product-15.jpg';
+import p15 from './assets/img/product-16.jpg'
+import p16 from "./assets/img/product-8.jpg";
 
 
-import c1 from "./assests/img/combo-2.jpg"
-import c2 from './assests/img/combo-4.jpg'
-import c3 from './assests/img/combo-6.png'
-import c4 from './assests/img/combo-7.jpg'
-import c5 from "./assests/img/combo-8.jpg";
-import c6 from "./assests/img/combo-9.jpg";
-import c7 from './assests/img/combo-img-1.jpg'
-import c8 from './assests/img/combo-img-3.jpg'
-import c9 from './assests/img/combo-img-5.png'
+import c1 from "./assets/img/combo-2.jpg"
+import c2 from './assets/img/combo-4.jpg'
+import c3 from './assets/img/combo-6.png'
+import c4 from './assets/img/combo-7.jpg'
+import c5 from "./assets/img/combo-8.jpg";
+import c6 from "./assets/img/combo-9.jpg";
+import c7 from './assets/img/combo-img-1.jpg'
+import c8 from './assets/img/combo-img-3.jpg'
+import c9 from './assets/img/combo-img-5.png'
 
 
 // Product data with descriptions
