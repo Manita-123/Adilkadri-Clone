@@ -1,6 +1,6 @@
 import React from 'react'
-import LunchImg1 from '../assests/img/Launch.png'
-import AttarImg2 from '../assests/img/Attar.png'
+import LunchImg1 from '../assets/img/Launch.png'
+import AttarImg2 from '../assets/img/Attar.png'
 
 function Launch() {
   return (
@@ -13,6 +13,7 @@ function Launch() {
             alt="LaunchImg"
             className="block max-w-full h-auto object-contain"
             loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -22,6 +23,7 @@ function Launch() {
             alt="AttarImg2"
             className="block max-w-full h-auto object-contain"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

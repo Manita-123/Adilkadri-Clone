@@ -1,17 +1,17 @@
 
 import HeroCarousel from '../component/HeroCarousel'
 import Options from '../component/Options';
-import banner1 from "../assests/img/carousel-image-1.png";
-import banner2 from "../assests/img/carousel-image-2.png";
-import banner3 from "../assests/img/carousel-image-3.png";
-import banner4 from "../assests/img/carousel-image-4.png";
-import banner5 from "../assests/img/carousel-image-5.jpg";
+import banner1 from "../assets/img/carousel-image-1.png";
+import banner2 from "../assets/img/carousel-image-2.png";
+import banner3 from "../assets/img/carousel-image-3.png";
+import banner4 from "../assets/img/carousel-image-4.png";
+import banner5 from "../assets/img/carousel-image-5.jpg";
 
-import banner1Sm from "../assests/img/carousel-image-1-mobile.png"
-import banner2Sm from "../assests/img/carousel-image-2-mobile.png"
-import banner3Sm from "../assests/img/carousel-image-3-mobile.png"
-import banner4Sm from "../assests/img/carousel-image-4-mobile.jpg"
-import banner5Sm from "../assests/img/carousel-image-5-mobile.jpg"
+import banner1Sm from "../assets/img/carousel-image-1-mobile.png"
+import banner2Sm from "../assets/img/carousel-image-2-mobile.png"
+import banner3Sm from "../assets/img/carousel-image-3-mobile.png"
+import banner4Sm from "../assets/img/carousel-image-4-mobile.jpg"
+import banner5Sm from "../assets/img/carousel-image-5-mobile.jpg"
 
 import ProductCard from '../component/ProductList';
 import Category from '../component/Category';

@@ -69,6 +69,8 @@ export default function Wishlist() {
                       src={product.img}
                       alt={product.title}
                       className="w-full h-64 object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
 
                     <button

@@ -1,8 +1,8 @@
-import {Phone , Mail } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
 
-import insta from '../assests/img/instagram-icon.svg'
-import faceebook from '../assests/img/facebook-icon.svg'
-import youtube from '../assests/img/youtube.svg'
+import insta from '../assets/img/instagram-icon.svg'
+import faceebook from '../assets/img/facebook-icon.svg'
+import youtube from '../assets/img/youtube.svg'
 
 export default function Footer() {
   return (
@@ -22,18 +22,21 @@ export default function Footer() {
           <h1 className='text-3xl font-bold mb-5'>ADILQADRI</h1>
 
           <div className="flex items-center gap-3 mb-4">
-          <Phone />
+            <Phone />
             <p className='text-lg font-bold'>  +918885978692</p>
           </div>
           <div className="flex items-center gap-3">
-          <Mail/>
-          <p className='text-lg font-bold'>info@adilqadri.com</p>
+            <Mail />
+            <p className='text-lg font-bold'>info@adilqadri.com</p>
           </div>
 
           <div className="flex my-3 gap-4 ">
-            <img src={faceebook} alt="Facebook Icon" className='w-8 h-10' />
-            <img src={insta} alt="Instagram Icon" className='w-8 h-10' />
-            <img src={youtube} alt="Youtube Icon" className='w-8 h-10' />
+            <img src={faceebook} alt="Facebook Icon" className='w-8 h-10' loading="lazy"
+              decoding="async" />
+            <img src={insta} alt="Instagram Icon" className='w-8 h-10' loading="lazy"
+              decoding="async" />
+            <img src={youtube} alt="Youtube Icon" className='w-8 h-10' loading="lazy"
+              decoding="async" />
           </div>
 
 
@@ -93,13 +96,13 @@ export default function Footer() {
           </form>
 
           {/* bottom area */}
-          
+
         </section>
       </div>
       <div className="mt-6 flex justify-between text-gray-400">
-            <p>&copy; 2026 Adilqadri | All Rights Reserved</p>
-            <p>Developed by Manita</p>
-          </div>
+        <p>&copy; 2026 Adilqadri | All Rights Reserved</p>
+        <p>Developed by Manita</p>
+      </div>
     </div>
   )
 }

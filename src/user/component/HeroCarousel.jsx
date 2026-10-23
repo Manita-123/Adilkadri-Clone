@@ -33,7 +33,8 @@ export default function HeroCarousel({ slides = [], mobileBreakpoint = 768, auto
                   src={desktop}
                   alt={alt}
                   className="w-full h-full object-cover block"
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                 />
               </picture>
 

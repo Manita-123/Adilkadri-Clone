@@ -5,8 +5,8 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext"
 
 
-import img1 from "../assests/img//product-13.png"
-import img2 from '../assests/img/product-16.jpg'
+import img1 from "../assets/img//product-13.png"
+import img2 from '../assets/img/product-16.jpg'
 import { smallProducts } from "../data";
 
 
@@ -153,8 +153,10 @@ function Navbar() {
             <p className="uppercase font-bold text-amber-800/70">Build your bundle</p>
 
             <div className="flex my-5 border-b border-gray-400">
-              <img src={img1} alt="perfume" className="w-45 h-50 transform transition-transform duration-300 ease-out hover:scale-50" />
-              <img src={img2} alt="perfume" className="w-45 h-50 transform transition-transform duration-300 ease-out hover:scale-50" />
+              <img src={img1} alt="perfume" className="w-45 h-50 transform transition-transform duration-300 ease-out hover:scale-50" loading="lazy"
+                      decoding="async"/>
+              <img src={img2} alt="perfume" className="w-45 h-50 transform transition-transform duration-300 ease-out hover:scale-50" loading="lazy"
+                      decoding="async"  />
             </div>
 
             <p className="uppercase font-bold text-amber-800/70 mb-7">Shop By category</p>
@@ -162,7 +164,8 @@ function Navbar() {
             {
               smallProducts.map((p) => (
                 <div className="flex gap-4 px-3 py-5 border-b  items-center  border-gray-300 hover:bg-white ">
-                  <img src={p.img} alt="Women Fragrances" className="w-20 h-20 rounded-xl transform transition-transform duration-300 ease-out hover:scale-50" />
+                  <img src={p.img} alt="Women Fragrances" className="w-20 h-20 rounded-xl transform transition-transform duration-300 ease-out hover:scale-50" loading="lazy"
+                      decoding="async" />
 
                   <div>
                     <h3 className="font-bold text-lg text-amber-900">{p.title}</h3>
