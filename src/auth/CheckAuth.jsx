@@ -30,13 +30,8 @@ export default function CheckAuth({ loading, user, children }) {
 
   // Admin pages
   if (location.pathname.startsWith("/admin")) {
-    if (!isAuthenticated) {
-      return <Navigate to="/login" replace />;
-    }
-
-    if (!isAdmin) {
-      return <Navigate to="/unauth-page" replace />;
-    }
+    if (!user) return <Navigate to="/login" replace />;
+  if (user.role !== "admin") return <Navigate to="/unauth-page" replace />;
   }
 
   // User protected pages

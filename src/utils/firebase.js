@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
-
+import { getAuth } from "firebase/auth";
 
 const apikey = import.meta.env.VITE_FIREBASE_API_KEY;
 
@@ -10,12 +10,13 @@ const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID;
 const storageBucket = import.meta.env.VITE_FIREBASE_STORAGE_BUCKET;
 const messagingSenderId = import.meta.env.VITE_FIREBASE_MESSING_SENDER_ID;
 const appId = import.meta.env.VITE_FIREBASE_APP_ID;
-const measurementId = import.meta.env.VITE_MEASURMENT_ID;
-
+const measurementId = import.meta.env.VITE_FIREBASE_MEASURMENT_ID;
+// const databaseURL = import.meta.env.VITE_FIREBASE_DATABASE_URL;
 
     const firebaseConfig = {
         apiKey: apikey,
         authDomain: authDomain,
+        // databaseURL : databaseURL,
         projectId: projectId,
         storageBucket: storageBucket,
         messagingSenderId: messagingSenderId,
@@ -25,6 +26,8 @@ const measurementId = import.meta.env.VITE_MEASURMENT_ID;
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 const db = getFirestore(app);
+export const auth = getAuth(app);
 
 export { app, db };
