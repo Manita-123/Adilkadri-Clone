@@ -5,6 +5,7 @@ import ProductList from "../component/ProductList";
 import ComboProduct from "../component/ComboProducts";
 import { products as allProducts, ComboProducts as allCombos } from "../data";
 
+
 export default function SearchFilter({ placeholder = "Search products..." }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(null); // null = no search yet, [] = searched no matches
