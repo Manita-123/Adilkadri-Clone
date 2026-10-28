@@ -15,7 +15,7 @@ import { auth } from "../utils/firebase";
 import { app } from "../utils/firebase"
 
 const authen = getAuth(app);
-// console.log(authen);
+console.log(authen);
 
 
 export const AuthContext = createContext(null);
