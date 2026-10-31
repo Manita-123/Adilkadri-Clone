@@ -1,5 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
+
+import {db} from "../utils/firebase"
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -8,14 +10,10 @@ import {
   updateProfile,
 } from "firebase/auth";
 
-import { getAuth } from "firebase/auth";
+import { collection, addDoc } from "firebase/firestore";
+
 
 import { auth } from "../utils/firebase";
-
-import { app } from "../utils/firebase"
-
-const authen = getAuth(app);
-console.log(authen);
 
 
 export const AuthContext = createContext(null);
